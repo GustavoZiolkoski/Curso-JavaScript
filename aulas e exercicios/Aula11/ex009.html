@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body {
+            background-color: rgb(34, 34, 143);
+            color: white;
+            font: normal 18px Arial;
+        }
+        h1  {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Teste de nacionalidade</h1>
+    Qual o seu país de origem? <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+
+        window.alert('Olá, seja bem vindo!')
+
+        function clicar() {           
+            var txtp = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#res')
+            var p = String(txtp.value)
+            res.innerHTML = `<p>Seu país de origem é ${p}.</p>`
+            if( p != `Brasil`){
+                res.innerHTML += `<p>Você é Estrangeiro.</p>`
+            }else{
+                res.innerHTML += `<p>Você é Brasileiro.</p>`
+            }
+        } 
+
+    </script>
+
+    
+</body>
+</html>
